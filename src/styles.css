@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #3a2e22;
+  background: #f5f0e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+html { min-width: 320px; background: #f5f0e8; }
+
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #f5f0e8; }
+
+button, a { font: inherit; }
+
+a { color: inherit; }
+
+.site-shell { min-height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+main { flex: 1; }
+
+.hero {
+  min-height: min(760px, 100svh);
+  padding: clamp(2.5rem, 8vw, 6.5rem) 1.25rem 4rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-content { width: min(100%, 42rem); text-align: center; position: relative; z-index: 1; }
+
+.brand-mark { display: inline-flex; flex-direction: column; align-items: center; gap: 0.32rem; margin-bottom: clamp(2.25rem, 7vh, 4.75rem); color: #3a2e22; }
+
+.brand-logo { display: block; width: min(13rem, 55vw); height: auto; }
+
+.brand-rule { width: 3rem; height: 1px; background: #b85c3e; }
+
+.brand-caption { font-size: .53rem; letter-spacing: .22em; font-weight: 700; margin-left: .22em; color: #8a7a6a; }
+
+.eyebrow, .section-label { margin: 0 0 1rem; color: #b85c3e; font-size: .68rem; font-weight: 700; letter-spacing: .2em; }
+
+h1, h2, p { margin-top: 0; }
+
+h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: -.025em; }
+
+h1 { max-width: 35rem; margin: 0 auto 1.25rem; font-size: clamp(2.4rem, 9vw, 4.4rem); line-height: 1.08; }
+
+.intro { max-width: 31rem; margin: 0 auto 2rem; color: #6d5f52; font-size: clamp(.98rem, 2.5vw, 1.1rem); line-height: 1.7; }
+
+.download-button { display: inline-flex; align-items: center; justify-content: center; gap: .7rem; min-height: 3.8rem; padding: .85rem 1.5rem; border-radius: .7rem; background: #b85c3e; color: #fffaf3; box-shadow: 0 .8rem 1.8rem rgba(105, 59, 40, .17); font-size: 1rem; font-weight: 700; text-decoration: none; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+
+.download-button:hover { background: #9f4e35; transform: translateY(-2px); box-shadow: 0 1rem 2rem rgba(105, 59, 40, .22); }
+
+.download-button:focus-visible { outline: 3px solid #3a2e22; outline-offset: 4px; }
+
+.download-button svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+
+.version { margin: .9rem 0 0; color: #6d5f52; font-size: .8rem; font-weight: 600; }
+
+.version span { color: #b85c3e; padding: 0 .3rem; }
+
+.download-note { margin: .45rem 0 0; color: #8a7a6a; font-size: .74rem; }
+
+.hero-accent { position: absolute; right: -7rem; bottom: -11rem; width: 23rem; height: 23rem; border: 1px solid rgba(184, 92, 62, .18); border-radius: 50%; z-index: -1; }
+
+.hero-accent::after { content: ''; position: absolute; inset: 2.3rem; border: 1px solid rgba(184, 92, 62, .12); border-radius: 50%; }
+
+.manifesto { padding: clamp(4.5rem, 11vw, 8rem) 1.25rem clamp(5rem, 12vw, 8.5rem); text-align: center; border-top: 1px solid rgba(58, 46, 34, .1); }
+
+.manifesto h2 { margin-bottom: .8rem; font-size: clamp(2rem, 7vw, 3.2rem); }
+
+.manifesto p:last-child { margin: 0; color: #6d5f52; font-size: 1rem; }
+
+.footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.3rem 1.25rem calc(1.3rem + env(safe-area-inset-bottom)); border-top: 1px solid rgba(58, 46, 34, .1); color: #8a7a6a; font-size: .72rem; letter-spacing: .02em; }
+
+@media (max-width: 400px) {
+  .hero { padding-top: 2.25rem; padding-bottom: 3rem; }
+  .brand-mark { margin-bottom: 2rem; }
+  h1 { font-size: 2.25rem; }
+  .intro { font-size: .92rem; line-height: 1.6; margin-bottom: 1.6rem; }
+  .download-button { width: 100%; padding-inline: 1rem; }
+}
+
+@media (min-width: 700px) {
+  .footer { padding-inline: 3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .download-button { transition: none; }
+}
