@@ -25,7 +25,7 @@ function App() {
               </svg>
               <span>Baixar FIO para Android</span>
             </a>
-            <p className="version">Versão 1.0 <span aria-hidden="true">•</span> Android</p>
+            <p className="version">Versão 1.1.1 <span aria-hidden="true">•</span> Android</p>
             <p className="download-note">A instalação é feita diretamente pelo arquivo APK.</p>
           </div>
           <span className="hero-accent" aria-hidden="true" />
